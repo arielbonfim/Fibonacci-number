@@ -5,7 +5,16 @@ int fibonacci (int n);
 
 int main (void)
 {
-    int n = get_int("n: ");
+    int n = 0;
+    do
+    {
+        n = get_int("Sequence length: ");
+        if (n > 46)
+        {
+            printf("46 is the max length supported.\n");
+        }
+    }
+    while (n > 46);
     for(int m = 0; m <= n; m++)
         printf ("%i, ", fibonacci(m));
     printf("\n");
